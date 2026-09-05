@@ -243,20 +243,12 @@ Classic references:
 
 ### How AI was used
 
-AI was used for the following tasks:
+### AI Usage
 
-- Drafting the initial project structure and the configuration loader.
-- Implementing the ghost pathfinding (BFS) and the game state machine.
-- Writing the unit tests and the packaging configuration.
-- Reviewing the code for edge cases (e.g., sealed maze cells, level
-  transitions during a walk, pygame headless testing).
-
-All generated code was reviewed, tested (flake8, mypy, pytest) and adapted
-to the project requirements. The maze generation logic itself comes
-exclusively from the assigned A-Maze-ing package and was not modified.
-
-## Packaging and Deployment
-
-The repository contains the full source and the packaging spec at the root
-(`pacman.spec`, PyInstaller). See [`packaging/`](packaging/) for the build
-instructions and the Itch.io deployment guide.
+* Used AI to help understand programming concepts and project requirements.
+* Used AI to explore different approaches and possible solutions.
+* Tested and compared different code variants suggested by AI.
+* Used AI to help identify and fix bugs during development.
+* Used AI to improve and structure the README documentation.
+* All generated code and suggestions were reviewed, understood, modified when necessary, and tested by the team.
+* AI was used as a learning and development assistant, not as a replacement for understanding the implementation.
