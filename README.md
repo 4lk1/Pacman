@@ -243,7 +243,7 @@ Classic references:
 
 ### How AI was used
 
-AI (Codebuff) was used for the following tasks:
+AI was used for the following tasks:
 
 - Drafting the initial project structure and the configuration loader.
 - Implementing the ghost pathfinding (BFS) and the game state machine.
