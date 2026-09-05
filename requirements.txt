@@ -1,0 +1,10 @@
+# Runtime dependencies
+pygame-ce>=2.5.0
+
+# The assigned A-Maze-ing package, provided as a wheel in the repository.
+./mazegenerator-00001/mazegenerator-2.1.0-py3-none-any.whl
+
+# Development / quality tools (flake8, mypy) and packaging (PyInstaller)
+flake8>=7.0
+mypy>=1.10
+pyinstaller>=6.0

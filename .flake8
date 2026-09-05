@@ -1,0 +1,5 @@
+[flake8]
+# Keep `flake8 .` working when a virtual environment or build
+# artifacts are present in the repository.
+exclude = .venv,venv,__pycache__,build,dist,.git
+max-line-length = 79
