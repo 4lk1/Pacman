@@ -281,11 +281,14 @@ class Renderer:
         life_x = 200
         life_label = font.render("LIVES", True, COLOR_TEXT)
         surface.blit(life_label, (life_x, 14))
-        for index in range(max(0, game.lives)):
-            pygame.draw.circle(
-                surface, COLOR_PLAYER,
-                (life_x + life_label.get_width() + 16 + index * 20, 26), 7,
-            )
+        icon_x = life_x + life_label.get_width() + 16
+        visible_lives = min(max(0, game.lives), 3)
+        for index in range(visible_lives):
+            self._draw_life_icon(surface, icon_x + index * 20, 26)
+        extra_lives = max(0, game.lives - 3)
+        if extra_lives:
+            extra_text = font.render(f"+{extra_lives}", True, COLOR_TEXT)
+            surface.blit(extra_text, (icon_x + 64, 14))
         surface.blit(
             font.render(
                 f"LEVEL {game.level_index + 1}/{game.level_count}", True,
@@ -304,6 +307,18 @@ class Renderer:
                 cheat_text,
                 (surface.get_width() - time_text.get_width() - 150, 14),
             )
+
+    def _draw_life_icon(self, surface: pygame.Surface, x: int, y: int) -> None:
+        """Draw one small Pac-Man-shaped life icon in the HUD."""
+        radius = 8
+        center = (x, y)
+        pygame.draw.circle(surface, COLOR_PLAYER, center, radius)
+        pygame.draw.polygon(
+            surface,
+            COLOR_BG,
+            [center, (x + radius, y - radius // 2),
+             (x + radius, y + radius // 2)],
+        )
 
     def _draw_intro(self, surface: pygame.Surface, game: PacmanGame) -> None:
         """Draw the "LEVEL N" banner shown at the start of a level."""

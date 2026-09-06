@@ -30,7 +30,7 @@ $ make install
 This installs all dependencies from `requirements.txt`: the `pygame-ce`
 graphical library, the assigned A-Maze-ing package (installed from the
 provided wheel `mazegenerator-00001/mazegenerator-2.1.0-py3-none-any.whl`),
-and the development tools (flake8, mypy, pytest, PyInstaller).
+and the development tools (flake8, mypy, and PyInstaller).
 
 ### Running the game
 

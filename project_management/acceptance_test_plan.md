@@ -2,9 +2,10 @@
 
 ## Test strategy
 
-- **Unit tests** (pytest, `tests/`): configuration, highscores, maze
-  adapter, game logic, and a headless end-to-end application run. All
-  game tests run without a display.
+- **Unit tests** (run during development): configuration, highscores, maze
+  adapter, game logic, and a headless end-to-end application run. These
+  development-only tests are intentionally excluded from the delivery
+  package.
 - **Static checks**: `flake8 .` (clean) and `mypy .` with the mandatory
   flags (clean).
 - **Manual/headless runs**: the full game loop was exercised through the
@@ -13,24 +14,24 @@
 
 ## Features tested (all pass)
 
-| Feature                       | Test(s)                                                          |
+| Feature                       | Validation                                                     |
 |-------------------------------|------------------------------------------------------------------|
-| JSON comments (# and //)      | `tests/test_config.py`                                           |
-| Config defaults & clamping    | `tests/test_config.py`                                           |
-| Unknown keys ignored          | `tests/test_config.py`                                           |
-| Missing/broken config file    | `tests/test_config.py`, CLI runs                                 |
-| Maze generation via package   | `tests/test_maze_loader.py` (perfect=False, retry, error)        |
-| Wall/movement encoding        | `tests/test_maze_loader.py`                                      |
-| Highscore validation & top 10 | `tests/test_highscores.py`                                       |
-| Corrupted highscore file      | `tests/test_highscores.py`                                       |
-| Player movement & wall blocking | `tests/test_game.py`                                           |
-| Pacgum/super-pacgum scoring   | `tests/test_game.py`                                             |
-| Ghost chase/flee/eaten/respawn| `tests/test_game.py`                                             |
-| Lives, respawn, game over     | `tests/test_game.py`                                             |
-| Timeout restart               | `tests/test_game.py`                                             |
-| Level progression & victory   | `tests/test_game.py`                                             |
-| All cheat features            | `tests/test_game.py`, `tests/test_app.py`                        |
-| Full game loop (headless)     | `tests/test_app.py`                                              |
+| JSON comments (# and //)      | Development unit tests                                           |
+| Config defaults & clamping    | Development unit tests                                           |
+| Unknown keys ignored          | Development unit tests                                           |
+| Missing/broken config file    | Development unit tests and CLI runs                              |
+| Maze generation via package   | Development unit tests                                           |
+| Wall/movement encoding        | Development unit tests                                           |
+| Highscore validation & top 10 | Development unit tests                                           |
+| Corrupted highscore file      | Development unit tests                                           |
+| Player movement & wall blocking | Development unit tests                                         |
+| Pacgum/super-pacgum scoring   | Development unit tests                                           |
+| Ghost chase/flee/eaten/respawn| Development unit tests                                           |
+| Lives, respawn, game over     | Development unit tests                                           |
+| Timeout restart               | Development unit tests                                           |
+| Level progression & victory   | Development unit tests                                           |
+| All cheat features            | Development unit tests                                           |
+| Full game loop (headless)     | Manual/headless validation                                        |
 
 ## Bugs found and fixed during testing
 

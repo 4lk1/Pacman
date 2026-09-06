@@ -3,10 +3,10 @@ PAC-MAN - Ghosts! More ghosts!
 
 HOW TO RUN
     Windows/macOS/Linux: double-click "pacman" (or run it from a
-    terminal). The game needs a configuration file:
+    terminal). From a terminal, provide exactly one configuration file:
         pacman config.json
-    If no argument is given, the game asks for one. The config file is
-    JSON with comments (lines starting with # or // are ignored).
+    The config file is JSON with comments (lines starting with # or // are
+    ignored). Missing or invalid values fall back to safe defaults.
 
 CONTROLS
     Move .............. Arrow keys or WASD
