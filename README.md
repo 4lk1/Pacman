@@ -224,10 +224,50 @@ victory screens with name entry.
 
 ## Project Management
 
-The activity was driven with a structured approach; all management
-documents (timeline, progress tracking, project and risk analysis, team
-organization, acceptance test plan, blocking points) are stored in the
-dedicated [`project_management/`](project_management/) directory.
+The project was implemented and reviewed against the requirements extracted
+from the subject PDF. The dedicated [`project_management/`](project_management/)
+directory keeps the detailed audit trail required for submission; this section
+is the short, single-file summary.
+
+### Decisions
+
+- `pygame-ce` provides the 2D graphics and input layer.
+- `src/game.py` contains pygame-free game rules so they can be tested without
+  a display; `src/renderer.py` and `src/ui.py` only draw and collect input.
+- The assigned A-Maze-ing wheel is used unchanged through the adapter in
+  `src/maze_loader.py`; no replacement maze generator is used.
+- Highscores use a validated, human-readable JSON file rather than a database
+  or network service.
+- Invalid or missing configuration and highscore files produce warnings and
+  safe behavior instead of tracebacks.
+- A timeout costs one life and restarts the current level.
+
+### Verification checklist
+
+The completed review covered configuration comments/defaults/clamping, maze
+generation and wall movement, score and highscore validation, ghost chase/flee
+and respawn behavior, lives and timeout handling, level progression, cheat
+mode, the complete headless game loop, `flake8`, and `mypy`. The acceptance
+test plan and risk/blocking-point notes are kept in `project_management/`.
+
+### Standalone package
+
+Build the portable folder with:
+
+```console
+$ make build
+```
+
+PyInstaller writes `dist/pacman/`, including the executable, Python runtime,
+dependencies, and this README as the in-package user guide. Start it from a
+terminal with:
+
+```console
+$ dist/pacman/pacman config.json
+```
+
+The actual upload to a distribution platform requires the owner's account and
+is intentionally a manual step; the local build is the complete deliverable.
 
 ## Resources
 

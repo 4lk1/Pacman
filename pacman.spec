@@ -13,7 +13,7 @@ a = Analysis(
     ["pac-man.py"],
     pathex=[],
     binaries=[],
-    datas=[("packaging/INSTRUCTIONS.txt", "packaging")],
+    datas=[("README.md", ".")],
     hiddenimports=hiddenimports,
     hookspath=[],
     hooksconfig={},
