@@ -259,6 +259,16 @@ def _parse_levels(raw: Any, silent: bool = False) -> list[LevelConfig]:
             DEFAULT_LEVEL_HEIGHT, 15, 60, silent=silent,
         )
         levels.append(LevelConfig(width, height))
+    if len(levels) < len(DEFAULT_LEVELS):
+        if not silent:
+            logger.warning(
+                "Config key 'levels' contains %d level(s); at least %d are "
+                "required. Filling the remaining levels with defaults.",
+                len(levels), len(DEFAULT_LEVELS),
+            )
+        for index in range(len(levels), len(DEFAULT_LEVELS)):
+            fallback = DEFAULT_LEVELS[index]
+            levels.append(LevelConfig(**fallback))
     return levels
 
 
