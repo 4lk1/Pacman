@@ -295,5 +295,5 @@ progression, timeout handling, cheat mode, and the headless game loop. AI was
 also used to improve and structure this README.
 
 All AI-generated suggestions and code were reviewed, understood, adapted when
-necessary, and tested by the team. AI supported the development process but
-did not replace the team's decisions or understanding of the implementation.
+necessary, and tested by us. AI supported the development process but
+did not replace our decisions or understanding of the implementation.
