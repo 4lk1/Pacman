@@ -156,7 +156,6 @@ class Level:
 
         if self.intro_remaining > 0.0:
             self.intro_remaining -= dt
-            self._update_player(dt, direction, cheats, events)
             return events
 
         self._update_player(dt, direction, cheats, events)
