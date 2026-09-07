@@ -223,8 +223,9 @@ victory screens with name entry.
 ## Project Management
 
 The project was implemented and reviewed against the requirements extracted
-from the subject PDF. This section keeps the project decisions and verification
-summary in the README so the project has one documentation entry point.
+from the subject PDF. The dedicated [`project_management/`](project_management/)
+directory keeps the detailed audit trail required for submission; this section
+is the short, single-file summary.
 
 ### Decisions
 
@@ -244,7 +245,8 @@ summary in the README so the project has one documentation entry point.
 The completed review covered configuration comments/defaults/clamping, maze
 generation and wall movement, score and highscore validation, ghost chase/flee
 and respawn behavior, lives and timeout handling, level progression, cheat
-mode, the complete headless game loop, `flake8`, and `mypy`.
+mode, the complete headless game loop, `flake8`, and `mypy`. The acceptance
+test plan and risk/blocking-point notes are kept in `project_management/`.
 
 ### Standalone package
 
