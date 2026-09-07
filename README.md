@@ -10,8 +10,6 @@ package assigned at project start), a persistent highscore system, multiple
 levels with increasing difficulty, four ghosts with distance-based chase and
 flee behaviors, and a cheat mode designed to make peer review easy.
 
-The game follows the classic loop: **Main Menu > start game > Win or Lose >
-Enter name for highscore > Back to Main Menu**.
 
 ## Instructions
 
