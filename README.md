@@ -279,14 +279,21 @@ Classic references:
 - The A-Maze-ing `mazegenerator` package documentation (see the wheel's
   METADATA and the module docstring in `mazegenerator/mazegenerator.py`).
 
-### How AI was used
-
 ### AI Usage
 
-* Used AI to help understand programming concepts and project requirements.
-* Used AI to explore different approaches and possible solutions.
-* Tested and compared different code variants suggested by AI.
-* Used AI to help identify and fix bugs during development.
-* Used AI to improve and structure the README documentation.
-* All generated code and suggestions were reviewed, understood, modified when necessary, and tested by the team.
-* AI was used as a learning and development assistant, not as a replacement for understanding the implementation.
+AI was used as a development assistant throughout the project. The AI
+sessions helped us understand the subject requirements and turn them into a
+simple project plan. That plan was used to mirror the requirements in the
+implementation, choose an appropriate architecture, and identify the most
+practical approach for each feature.
+
+AI was also used to improve the testing process by suggesting test cases,
+checking edge cases, comparing possible implementations, and helping identify
+and fix bugs. In particular, the sessions helped us verify configuration
+validation, maze movement, scoring, highscore handling, ghost behavior, game
+progression, timeout handling, cheat mode, and the headless game loop. AI was
+also used to improve and structure this README.
+
+All AI-generated suggestions and code were reviewed, understood, adapted when
+necessary, and tested by the team. AI supported the development process but
+did not replace the team's decisions or understanding of the implementation.
