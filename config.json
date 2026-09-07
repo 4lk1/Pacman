@@ -1,40 +1,14 @@
 {
-  # Pac-Man configuration file.
-  # Lines starting with # (or //) are comments and are ignored.
-  # Every key is optional: missing or invalid values fall back to safe
-  # defaults and are reported on the console. Unknown keys are ignored.
-
-  # File where the top-10 highscores are saved (JSON, relative to the
-  # current working directory).
   "highscore_filename": "highscores.json",
-
-  # Number of lives at the start of a game (1-9).
   "lives": 3,
-
-  # Percentage (0-100) of corridor cells that contain a pacgum.
   "pacgum": 42,
-
-  # Points awarded for each collectible.
   "points_per_pacgum": 10,
   "points_per_super_pacgum": 50,
   "points_per_ghost": 200,
-
-  # Fixed seed used to generate the first level (subsequent levels use
-  # a random seed).
   "seed": 42,
-
-  # Time limit per level in seconds (10-600). When the timer reaches
-  # zero, the player loses a life and the level restarts.
   "level_max_time": 90,
-
-  # How long ghosts stay edible after eating a super-pacgum (seconds).
   "super_pacgum_duration": 8,
-
-  # Time an eaten ghost needs to walk back to its corner (seconds).
   "ghost_respawn_time": 8,
-
-  # The levels of the game, from easiest (small maze) to hardest. Each
-  # level has a width and a height in cells (15-60).
   "levels": [
     { "width": 15, "height": 15 },
     { "width": 17, "height": 15 },
